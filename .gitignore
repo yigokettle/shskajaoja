@@ -1,0 +1,18 @@
+# 虚拟环境 / 缓存
+.venv/
+.mplcache/
+__pycache__/
+*.pyc
+.DS_Store
+
+# 别人的参考仓库（各自是独立 git clone，不应嵌入本仓库）
+_review/
+
+# 超大中间产物（6.6G，GitHub 单文件上限 100MB）
+Q2_架次优化/pool_expanded.json
+
+# 大体积中间候选池（可由 scripts 重新生成）
+Q2_架次优化/pool_c8.json
+Q2_架次优化/pool_pruned.json
+Q2_架次优化/pool_bat.json
+Q2_架次优化/pool_slim.json

@@ -1,0 +1,411 @@
+{
+  "n": 23,
+  "cmax_s": 6991,
+  "energy_kwh": 69.75133202545094,
+  "models": {
+    "C": 7,
+    "B": 7,
+    "A": 9
+  },
+  "trips": [
+    {
+      "idx": 4,
+      "model": "C",
+      "route": [
+        "S001"
+      ],
+      "boxes": [
+        "S001-FOD-01",
+        "S001-FOD-02",
+        "S001-FOD-03",
+        "S001-HYG-01",
+        "S001-HYG-02"
+      ],
+      "start_s": 5561,
+      "end_s": 6991,
+      "bat_end_s": 8408,
+      "energy_kwh": 2.1522600937964227
+    },
+    {
+      "idx": 32,
+      "model": "C",
+      "route": [
+        "S001"
+      ],
+      "boxes": [
+        "S001-MED-01",
+        "S001-MED-02",
+        "S001-WAT-01",
+        "S001-WAT-02",
+        "S001-WAT-03",
+        "S001-WAT-04",
+        "S001-WAT-05"
+      ],
+      "start_s": 1562,
+      "end_s": 3124,
+      "bat_end_s": 4751,
+      "energy_kwh": 2.929430740506568
+    },
+    {
+      "idx": 76,
+      "model": "C",
+      "route": [
+        "S001",
+        "S009",
+        "S011"
+      ],
+      "boxes": [
+        "S001-WAT-06",
+        "S001-WAT-07",
+        "S001-WAT-08",
+        "S009-FOD-01",
+        "S009-WAT-01",
+        "S011-WAT-01"
+      ],
+      "start_s": 2113,
+      "end_s": 4589,
+      "bat_end_s": 6876,
+      "energy_kwh": 5.367237905002829
+    },
+    {
+      "idx": 94,
+      "model": "B",
+      "route": [
+        "S009",
+        "S002"
+      ],
+      "boxes": [
+        "S002-FOD-01",
+        "S002-FOD-02",
+        "S009-MED-01"
+      ],
+      "start_s": 0,
+      "end_s": 2033,
+      "bat_end_s": 3787,
+      "energy_kwh": 2.5092211579755985
+    },
+    {
+      "idx": 121,
+      "model": "C",
+      "route": [
+        "S002"
+      ],
+      "boxes": [
+        "S002-HYG-01",
+        "S002-MED-01",
+        "S002-WAT-01",
+        "S002-WAT-02",
+        "S002-WAT-03",
+        "S002-WAT-04"
+      ],
+      "start_s": 0,
+      "end_s": 2113,
+      "bat_end_s": 4623,
+      "energy_kwh": 6.188207991148028
+    },
+    {
+      "idx": 149,
+      "model": "B",
+      "route": [
+        "S007",
+        "S003"
+      ],
+      "boxes": [
+        "S003-FOD-01",
+        "S003-FOD-02",
+        "S007-MED-01"
+      ],
+      "start_s": 2033,
+      "end_s": 4274,
+      "bat_end_s": 6038,
+      "energy_kwh": 2.5308484199305328
+    },
+    {
+      "idx": 182,
+      "model": "C",
+      "route": [
+        "S003"
+      ],
+      "boxes": [
+        "S003-HYG-01",
+        "S003-MED-01",
+        "S003-WAT-01",
+        "S003-WAT-02",
+        "S003-WAT-03",
+        "S003-WAT-04"
+      ],
+      "start_s": 3124,
+      "end_s": 5561,
+      "bat_end_s": 8077,
+      "energy_kwh": 6.2104506441401695
+    },
+    {
+      "idx": 213,
+      "model": "C",
+      "route": [
+        "S004"
+      ],
+      "boxes": [
+        "S004-FOD-01",
+        "S004-HYG-01",
+        "S004-MED-01",
+        "S004-WAT-01",
+        "S004-WAT-02",
+        "S004-WAT-03"
+      ],
+      "start_s": 4623,
+      "end_s": 6930,
+      "bat_end_s": 9439,
+      "energy_kwh": 6.183632102881447
+    },
+    {
+      "idx": 257,
+      "model": "A",
+      "route": [
+        "S005"
+      ],
+      "boxes": [
+        "S005-FOD-01",
+        "S005-WAT-03"
+      ],
+      "start_s": 2720,
+      "end_s": 4417,
+      "bat_end_s": 5554,
+      "energy_kwh": 2.2038060982788035
+    },
+    {
+      "idx": 273,
+      "model": "B",
+      "route": [
+        "S005"
+      ],
+      "boxes": [
+        "S005-HYG-01",
+        "S005-WAT-02"
+      ],
+      "start_s": 5415,
+      "end_s": 6935,
+      "bat_end_s": 8401,
+      "energy_kwh": 1.8435292042378821
+    },
+    {
+      "idx": 275,
+      "model": "A",
+      "route": [
+        "S005"
+      ],
+      "boxes": [
+        "S005-MED-01",
+        "S005-WAT-01"
+      ],
+      "start_s": 2799,
+      "end_s": 4496,
+      "bat_end_s": 5612,
+      "energy_kwh": 2.131792074190883
+    },
+    {
+      "idx": 313,
+      "model": "C",
+      "route": [
+        "S006"
+      ],
+      "boxes": [
+        "S006-FOD-01",
+        "S006-HYG-01",
+        "S006-MED-01",
+        "S006-WAT-01",
+        "S006-WAT-02",
+        "S006-WAT-03"
+      ],
+      "start_s": 0,
+      "end_s": 1562,
+      "bat_end_s": 3099,
+      "energy_kwh": 2.5967362481221263
+    },
+    {
+      "idx": 344,
+      "model": "A",
+      "route": [
+        "S007"
+      ],
+      "boxes": [
+        "S007-FOD-01",
+        "S007-WAT-02"
+      ],
+      "start_s": 0,
+      "end_s": 1729,
+      "bat_end_s": 2799,
+      "energy_kwh": 1.9726788391420222
+    },
+    {
+      "idx": 367,
+      "model": "B",
+      "route": [
+        "S007"
+      ],
+      "boxes": [
+        "S007-HYG-01",
+        "S007-WAT-01"
+      ],
+      "start_s": 0,
+      "end_s": 1577,
+      "bat_end_s": 2963,
+      "energy_kwh": 1.657955381635115
+    },
+    {
+      "idx": 380,
+      "model": "B",
+      "route": [
+        "S008"
+      ],
+      "boxes": [
+        "S008-FOD-01",
+        "S008-MED-01",
+        "S008-WAT-01"
+      ],
+      "start_s": 3447,
+      "end_s": 5415,
+      "bat_end_s": 7378,
+      "energy_kwh": 2.9892366275213544
+    },
+    {
+      "idx": 394,
+      "model": "B",
+      "route": [
+        "S008"
+      ],
+      "boxes": [
+        "S008-HYG-01",
+        "S008-WAT-02"
+      ],
+      "start_s": 4274,
+      "end_s": 6182,
+      "bat_end_s": 8052,
+      "energy_kwh": 2.7764482897371288
+    },
+    {
+      "idx": 451,
+      "model": "A",
+      "route": [
+        "S013",
+        "S010"
+      ],
+      "boxes": [
+        "S010-FOD-01",
+        "S013-FOD-01"
+      ],
+      "start_s": 3841,
+      "end_s": 5853,
+      "bat_end_s": 7003,
+      "energy_kwh": 2.2487583873199966
+    },
+    {
+      "idx": 456,
+      "model": "A",
+      "route": [
+        "S010"
+      ],
+      "boxes": [
+        "S010-MED-01",
+        "S010-WAT-01"
+      ],
+      "start_s": 0,
+      "end_s": 1655,
+      "bat_end_s": 2720,
+      "energy_kwh": 1.954588453417676
+    },
+    {
+      "idx": 476,
+      "model": "A",
+      "route": [
+        "S011",
+        "S015"
+      ],
+      "boxes": [
+        "S011-FOD-01",
+        "S015-FOD-01"
+      ],
+      "start_s": 0,
+      "end_s": 2217,
+      "bat_end_s": 3437,
+      "energy_kwh": 2.4890045277483153
+    },
+    {
+      "idx": 485,
+      "model": "A",
+      "route": [
+        "S011",
+        "S015"
+      ],
+      "boxes": [
+        "S011-MED-01",
+        "S015-MED-01",
+        "S015-WAT-01"
+      ],
+      "start_s": 1655,
+      "end_s": 3932,
+      "bat_end_s": 5180,
+      "energy_kwh": 2.5866042921387935
+    },
+    {
+      "idx": 511,
+      "model": "A",
+      "route": [
+        "S012"
+      ],
+      "boxes": [
+        "S012-FOD-01",
+        "S012-WAT-01"
+      ],
+      "start_s": 1729,
+      "end_s": 3841,
+      "bat_end_s": 5227,
+      "energy_kwh": 3.064880147757888
+    },
+    {
+      "idx": 521,
+      "model": "A",
+      "route": [
+        "S013",
+        "S012"
+      ],
+      "boxes": [
+        "S012-MED-01",
+        "S013-MED-01",
+        "S013-WAT-01"
+      ],
+      "start_s": 0,
+      "end_s": 2400,
+      "bat_end_s": 3774,
+      "energy_kwh": 3.024569361905304
+    },
+    {
+      "idx": 553,
+      "model": "B",
+      "route": [
+        "S014"
+      ],
+      "boxes": [
+        "S014-FOD-01",
+        "S014-MED-01",
+        "S014-WAT-01"
+      ],
+      "start_s": 1577,
+      "end_s": 3447,
+      "bat_end_s": 5041,
+      "energy_kwh": 2.139455036916048
+    }
+  ],
+  "stage1": {
+    "status": "FEASIBLE",
+    "cmax": 6991,
+    "bound": 2371.0,
+    "wall_s": 300.142335
+  },
+  "stage2": {
+    "status": "FEASIBLE",
+    "energy": 69.75133,
+    "bound": 62.323017,
+    "wall_s": 300.16404800000004
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "feasible": true,
+  "violations": [],
+  "trip_count": 25,
+  "box_count": 80,
+  "multi_stop_trip_count": 6,
+  "used_drones": 8,
+  "used_batteries": 14,
+  "makespan_s": 6569.099882661642,
+  "energy_kwh": 71.37213553613769,
+  "on_expected_count": 80,
+  "weighted_delay_s": 0.0,
+  "minimum_energy_margin_kwh": 0.1895493558598309,
+  "minimum_hard_slack_s": 548.531339532703,
+  "dem_max_absolute_difference_m": 5.684341886080803e-14,
+  "all_expected_deadlines": true,
+  "minimum_expected_slack_s": 548.531339532703,
+  "source_archive_sha256": "7b76147cdaf8d61fa93c3744de3cc2c94af9eb4f15e992f51c2fdd2aa508ee66"
+}

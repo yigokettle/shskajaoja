@@ -1,0 +1,31 @@
+候选池 11936（{'A': 2306, 'B': 5764, 'C': 3866}）
+时效性淘汰 0 个候选
+[01] 松弛=6102 LB=5806 机型={'C': 6, 'B': 7, 'A': 10} → 排程 INFEASIBLE Cmax=None  (30s)
+[02] 松弛=5945 LB=5808 机型={'C': 6, 'A': 10, 'B': 7} → 排程 INFEASIBLE Cmax=None  (60s)
+[03] 松弛=5942 LB=5808 机型={'C': 6, 'B': 7, 'A': 10} → 排程 INFEASIBLE Cmax=None  (91s)
+[04] 松弛=5942 LB=5836 机型={'C': 6, 'B': 7, 'A': 10} → 排程 INFEASIBLE Cmax=None  (121s)
+[05] 松弛=6069 LB=5836 机型={'C': 6, 'A': 10, 'B': 7} → 排程 INFEASIBLE Cmax=None  (151s)
+[06] 松弛=5962 LB=5836 机型={'C': 6, 'B': 7, 'A': 10} → 排程 INFEASIBLE Cmax=None  (181s)
+[07] 松弛=5962 LB=5836 机型={'C': 6, 'B': 7, 'A': 10} → 排程 INFEASIBLE Cmax=None  (211s)
+[08] 松弛=5942 LB=5838 机型={'C': 6, 'B': 7, 'A': 10} → 排程 INFEASIBLE Cmax=None  (242s)
+[09] 松弛=5945 LB=5838 机型={'C': 6, 'B': 7, 'A': 10} → 排程 INFEASIBLE Cmax=None  (272s)
+[10] 松弛=5942 LB=5838 机型={'C': 6, 'B': 7, 'A': 10} → 排程 INFEASIBLE Cmax=None  (302s)
+[11] 松弛=5942 LB=5838 机型={'C': 6, 'B': 7, 'A': 10} → 排程 INFEASIBLE Cmax=None  (332s)
+[12] 松弛=6152 LB=5838 机型={'C': 6, 'B': 8, 'A': 9} → 排程 INFEASIBLE Cmax=None  (362s)
+[13] 松弛=5975 LB=5838 机型={'C': 6, 'A': 10, 'B': 7} → 排程 INFEASIBLE Cmax=None  (392s)
+[14] 松弛=5975 LB=5838 机型={'C': 6, 'A': 10, 'B': 7} → 排程 INFEASIBLE Cmax=None  (423s)
+[15] 松弛=5942 LB=5838 机型={'C': 6, 'B': 7, 'A': 10} → 排程 INFEASIBLE Cmax=None  (453s)
+[16] 松弛=5962 LB=5838 机型={'C': 6, 'B': 7, 'A': 10} → 排程 INFEASIBLE Cmax=None  (483s)
+[17] 松弛=5942 LB=5838 机型={'C': 6, 'B': 7, 'A': 10} → 排程 INFEASIBLE Cmax=None  (513s)
+[18] 松弛=5942 LB=5942 机型={'C': 6, 'A': 10, 'B': 7} → 排程 INFEASIBLE Cmax=None  (541s)
+[19] 松弛=5957 LB=5942 机型={'C': 6, 'A': 10, 'B': 7} → 排程 INFEASIBLE Cmax=None  (571s)
+[20] 松弛=5975 LB=5942 机型={'C': 6, 'A': 10, 'B': 7} → 排程 INFEASIBLE Cmax=None  (601s)
+[21] 松弛=5942 LB=5942 机型={'C': 6, 'B': 7, 'A': 10} → 排程 INFEASIBLE Cmax=None  (631s)
+[22] 松弛=5975 LB=5942 机型={'C': 6, 'B': 7, 'A': 10} → 排程 INFEASIBLE Cmax=None  (663s)
+[23] 松弛=5975 LB=5942 机型={'C': 6, 'B': 7, 'A': 10} → 排程 OPTIMAL Cmax=6569  ★新最优  (694s)
+[24] 主问题 UNKNOWN → 所有组合已穷举
+
+============================================================
+最优 Cmax = 6569s   证明下界 LB = 5942s   缺口 627s
+=> N=23 Cmax=6569s 能耗=71.3885kWh 机型={'C': 6, 'B': 7, 'A': 10}
+已保存 /Users/shaw/Downloads/赛题/赛题/D题/Q2_架次优化/solution_bd23.json

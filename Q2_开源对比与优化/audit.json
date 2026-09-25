@@ -1,0 +1,4733 @@
+{
+  "repository": "D:\\新桌面\\D题解题\\tmp\\D_open_source\\Shamrock12138-D-fb5c9be",
+  "raw_input_hashes": [
+    {
+      "file": "中继无人机数据.xlsx",
+      "identical": true,
+      "cell_values_identical": true,
+      "local_sha256": "be52643ff29419233e6a141dca03a04160a8af551cab36d8c49b51bb836bea04",
+      "external_sha256": "be52643ff29419233e6a141dca03a04160a8af551cab36d8c49b51bb836bea04"
+    },
+    {
+      "file": "物资需求与配送时限.xlsx",
+      "identical": true,
+      "cell_values_identical": true,
+      "local_sha256": "5a3346159ceddcf585859d270b8f62114b388a1f737fbe64ffde0ee1fdc8170a",
+      "external_sha256": "5a3346159ceddcf585859d270b8f62114b388a1f737fbe64ffde0ee1fdc8170a"
+    },
+    {
+      "file": "调度中心与服务区.xlsx",
+      "identical": true,
+      "cell_values_identical": true,
+      "local_sha256": "541a7af1ded08c9a3ff448480332cb5f6a54902f0afa6e9bcd50c1d2b2b34e38",
+      "external_sha256": "541a7af1ded08c9a3ff448480332cb5f6a54902f0afa6e9bcd50c1d2b2b34e38"
+    },
+    {
+      "file": "运输无人机数据.xlsx",
+      "identical": false,
+      "cell_values_identical": true,
+      "local_sha256": "9296a657c07e042afba6aeea7999665d9cd24e00b592fd6c269de6e338480dcb",
+      "external_sha256": "238f134e3cbd7a84a2798b7331724f83105db2cbfd5c139103fae5c88a632320"
+    },
+    {
+      "file": "通信链路参数.xlsx",
+      "identical": true,
+      "cell_values_identical": true,
+      "local_sha256": "1860d153199e7ae460ba36e83b673374e640e19de91ea167f2877271001f5f81",
+      "external_sha256": "1860d153199e7ae460ba36e83b673374e640e19de91ea167f2877271001f5f81"
+    }
+  ],
+  "solutions": {
+    "Q2_moead_schedule_P001": {
+      "feasible": false,
+      "violation_count": 11,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000262"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000269"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000158"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000234"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000227"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000660"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R007361"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000438"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000575"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B01",
+          "trip": "R000516"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B02",
+          "trip": "R000606"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 20,
+        "box_count": 80,
+        "multi_stop_trip_count": 1,
+        "makespan_s": 9627.8365721046,
+        "total_energy_kwh": 62.7322166278873,
+        "weighted_delay": 55805.767456874135,
+        "on_expected_time_count": 75,
+        "on_expected_time_rate": 0.9375,
+        "minimum_hard_deadline_slack_s": 205.960771185637,
+        "minimum_energy_margin_kwh": 0.21636789711855364
+      },
+      "reported_energy_kwh": 62.66505990106663,
+      "reported_makespan_s": 9627.044640635811,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 20,
+          "box_count": 80,
+          "multi_stop_trip_count": 1,
+          "makespan_s": 9627.044640635786,
+          "total_energy_kwh": 62.665059901064446,
+          "weighted_delay": 55787.79351005955,
+          "on_expected_time_count": 75,
+          "on_expected_time_rate": 0.9375,
+          "minimum_hard_deadline_slack_s": 206.29936674900546,
+          "minimum_energy_margin_kwh": 0.22308925762055765
+        }
+      },
+      "external_radius_max_duration_difference_s": 9.890754881780595e-11,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 20,
+          "box_count": 80,
+          "multi_stop_trip_count": 1,
+          "makespan_s": 9630.501664331274,
+          "total_energy_kwh": 62.7322166278873,
+          "weighted_delay": 55972.030524309026,
+          "on_expected_time_count": 75,
+          "on_expected_time_rate": 0.9375,
+          "minimum_hard_deadline_slack_s": 205.84345025104358,
+          "minimum_energy_margin_kwh": 0.21636789711855364
+        }
+      }
+    },
+    "Q2_moead_schedule_P002": {
+      "feasible": false,
+      "violation_count": 12,
+      "violations": [
+        {
+          "type": "hard_deadline",
+          "items": [
+            "S014-MED-01",
+            "S014-WAT-01"
+          ]
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R003726"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000234"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000269"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000241"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000227"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000438"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000575"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000490"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000543"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B01",
+          "trip": "R000590"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B04",
+          "trip": "R012646"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": false,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 20,
+        "box_count": 80,
+        "multi_stop_trip_count": 2,
+        "makespan_s": 9561.8365721046,
+        "total_energy_kwh": 64.28047726435628,
+        "weighted_delay": 15126.920006644526,
+        "on_expected_time_count": 76,
+        "on_expected_time_rate": 0.95,
+        "minimum_hard_deadline_slack_s": -0.2594907262705419,
+        "minimum_energy_margin_kwh": 0.12703493028702084
+      },
+      "reported_energy_kwh": 64.21165685008624,
+      "reported_makespan_s": 9561.044640635811,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 20,
+          "box_count": 80,
+          "multi_stop_trip_count": 2,
+          "makespan_s": 9561.044640635786,
+          "total_energy_kwh": 64.21165685008405,
+          "weighted_delay": 15116.94266276164,
+          "on_expected_time_count": 77,
+          "on_expected_time_rate": 0.9625,
+          "minimum_hard_deadline_slack_s": 0.14460765662624908,
+          "minimum_energy_margin_kwh": 0.13377779143526247
+        }
+      },
+      "external_radius_max_duration_difference_s": 9.890754881780595e-11,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 20,
+          "box_count": 80,
+          "multi_stop_trip_count": 2,
+          "makespan_s": 9564.501664331274,
+          "total_energy_kwh": 64.28047726435629,
+          "weighted_delay": 15201.269402906582,
+          "on_expected_time_count": 77,
+          "on_expected_time_rate": 0.9625,
+          "minimum_hard_deadline_slack_s": 202.3728819039775,
+          "minimum_energy_margin_kwh": 0.12703493028702084
+        }
+      }
+    },
+    "Q2_moead_schedule_P003": {
+      "feasible": false,
+      "violation_count": 13,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000262"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000158"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000223"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000255"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R003841"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000660"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000606"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000438"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000575"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "B-B01",
+          "trip": "R000241"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "B-B02",
+          "trip": "R000269"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B01",
+          "trip": "R000516"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B02",
+          "trip": "R000280"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 21,
+        "box_count": 80,
+        "multi_stop_trip_count": 1,
+        "makespan_s": 9176.883741195285,
+        "total_energy_kwh": 62.304852782154036,
+        "weighted_delay": 49923.80611792931,
+        "on_expected_time_count": 77,
+        "on_expected_time_rate": 0.9625,
+        "minimum_hard_deadline_slack_s": 139.960771185637,
+        "minimum_energy_margin_kwh": 0.21179200885197247
+      },
+      "reported_energy_kwh": 62.238231589453534,
+      "reported_makespan_s": 9176.426177517464,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 21,
+          "box_count": 80,
+          "multi_stop_trip_count": 1,
+          "makespan_s": 9176.426177517442,
+          "total_energy_kwh": 62.238231589451374,
+          "weighted_delay": 49916.94266276161,
+          "on_expected_time_count": 77,
+          "on_expected_time_rate": 0.9625,
+          "minimum_hard_deadline_slack_s": 140.29936674900546,
+          "minimum_energy_margin_kwh": 0.21858644992990506
+        }
+      },
+      "external_radius_max_duration_difference_s": 9.890754881780595e-11,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 21,
+          "box_count": 80,
+          "multi_stop_trip_count": 1,
+          "makespan_s": 9179.548833421959,
+          "total_energy_kwh": 62.30485278215403,
+          "weighted_delay": 50003.75888472954,
+          "on_expected_time_count": 77,
+          "on_expected_time_rate": 0.9625,
+          "minimum_hard_deadline_slack_s": 139.84345025104358,
+          "minimum_energy_margin_kwh": 0.21179200885197247
+        }
+      }
+    },
+    "Q2_moead_schedule_P004": {
+      "feasible": false,
+      "violation_count": 11,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000234"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000223"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000158"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000660"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000606"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000438"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000516"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "B-B02",
+          "trip": "R000269"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "B-B03",
+          "trip": "R003841"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B02",
+          "trip": "R000280"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B03",
+          "trip": "R000575"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 22,
+        "box_count": 80,
+        "multi_stop_trip_count": 1,
+        "makespan_s": 9044.883741195285,
+        "total_energy_kwh": 63.138902020844235,
+        "weighted_delay": 59256.718543720584,
+        "on_expected_time_count": 76,
+        "on_expected_time_rate": 0.95,
+        "minimum_hard_deadline_slack_s": 139.960771185637,
+        "minimum_energy_margin_kwh": 0.21179200885197247
+      },
+      "reported_energy_kwh": 63.07142729116649,
+      "reported_makespan_s": 9044.426177517464,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 22,
+          "box_count": 80,
+          "multi_stop_trip_count": 1,
+          "makespan_s": 9044.426177517442,
+          "total_energy_kwh": 63.071427291164234,
+          "weighted_delay": 59247.479427655875,
+          "on_expected_time_count": 76,
+          "on_expected_time_rate": 0.95,
+          "minimum_hard_deadline_slack_s": 140.29936674900546,
+          "minimum_energy_margin_kwh": 0.21858644992990506
+        }
+      },
+      "external_radius_max_duration_difference_s": 9.890754881780595e-11,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 22,
+          "box_count": 80,
+          "multi_stop_trip_count": 1,
+          "makespan_s": 9047.548833421959,
+          "total_energy_kwh": 63.138902020844235,
+          "weighted_delay": 56173.37034750919,
+          "on_expected_time_count": 76,
+          "on_expected_time_rate": 0.95,
+          "minimum_hard_deadline_slack_s": 139.84345025104358,
+          "minimum_energy_margin_kwh": 0.21179200885197247
+        }
+      }
+    },
+    "Q2_moead_schedule_P005": {
+      "feasible": false,
+      "violation_count": 12,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000255"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000211"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000223"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000248"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000241"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R003841"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000438"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000490"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000516"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "B-B03",
+          "trip": "R000158"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B01",
+          "trip": "R000280"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B04",
+          "trip": "R000606"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 22,
+        "box_count": 80,
+        "multi_stop_trip_count": 1,
+        "makespan_s": 8943.883741195285,
+        "total_energy_kwh": 64.53202608895764,
+        "weighted_delay": 64557.90761121047,
+        "on_expected_time_count": 75,
+        "on_expected_time_rate": 0.9375,
+        "minimum_hard_deadline_slack_s": 202.53133953270344,
+        "minimum_energy_margin_kwh": 0.21179200885197247
+      },
+      "reported_energy_kwh": 64.46300831772997,
+      "reported_makespan_s": 8943.426177517465,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 22,
+          "box_count": 80,
+          "multi_stop_trip_count": 1,
+          "makespan_s": 8943.426177517442,
+          "total_energy_kwh": 64.46300831772774,
+          "weighted_delay": 64539.91120496568,
+          "on_expected_time_count": 75,
+          "on_expected_time_rate": 0.9375,
+          "minimum_hard_deadline_slack_s": 203.08662137739702,
+          "minimum_energy_margin_kwh": 0.21858644992990506
+        }
+      },
+      "external_radius_max_duration_difference_s": 9.890754881780595e-11,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 22,
+          "box_count": 80,
+          "multi_stop_trip_count": 1,
+          "makespan_s": 8946.160885128382,
+          "total_energy_kwh": 64.53202608895764,
+          "weighted_delay": 61069.210651618036,
+          "on_expected_time_count": 75,
+          "on_expected_time_rate": 0.9375,
+          "minimum_hard_deadline_slack_s": 202.3728819039775,
+          "minimum_energy_margin_kwh": 0.21179200885197247
+        }
+      }
+    },
+    "Q2_moead_schedule_P006": {
+      "feasible": false,
+      "violation_count": 13,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000255"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000215"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000223"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000248"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000241"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R003841"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000438"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000575"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000280"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000490"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000516"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "B-B03",
+          "trip": "R000158"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B04",
+          "trip": "R000606"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 22,
+        "box_count": 80,
+        "multi_stop_trip_count": 1,
+        "makespan_s": 8930.883741195285,
+        "total_energy_kwh": 64.84516566949871,
+        "weighted_delay": 64167.90761121047,
+        "on_expected_time_count": 75,
+        "on_expected_time_rate": 0.9375,
+        "minimum_hard_deadline_slack_s": 202.53133953270344,
+        "minimum_energy_margin_kwh": 0.03854697867147294
+      },
+      "reported_energy_kwh": 64.77579750172323,
+      "reported_makespan_s": 8930.426177517465,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 22,
+          "box_count": 80,
+          "multi_stop_trip_count": 1,
+          "makespan_s": 8930.426177517442,
+          "total_energy_kwh": 64.775797501721,
+          "weighted_delay": 64149.91120496568,
+          "on_expected_time_count": 75,
+          "on_expected_time_rate": 0.9375,
+          "minimum_hard_deadline_slack_s": 203.08662137739702,
+          "minimum_energy_margin_kwh": 0.041959919293270254
+        }
+      },
+      "external_radius_max_duration_difference_s": 9.890754881780595e-11,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 22,
+          "box_count": 80,
+          "multi_stop_trip_count": 1,
+          "makespan_s": 8932.416562960174,
+          "total_energy_kwh": 64.8451656694987,
+          "weighted_delay": 60656.8809865718,
+          "on_expected_time_count": 75,
+          "on_expected_time_rate": 0.9375,
+          "minimum_hard_deadline_slack_s": 202.3728819039775,
+          "minimum_energy_margin_kwh": 0.03854697867147294
+        }
+      }
+    },
+    "Q2_moead_schedule_P007": {
+      "feasible": false,
+      "violation_count": 13,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000248"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000269"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000215"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000227"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000262"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000158"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R004763"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000241"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000660"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000590"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000438"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R007361"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B01",
+          "trip": "R000516"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 22,
+        "box_count": 80,
+        "multi_stop_trip_count": 2,
+        "makespan_s": 8815.051067070412,
+        "total_energy_kwh": 65.60570599981737,
+        "weighted_delay": 2241.961338944875,
+        "on_expected_time_count": 78,
+        "on_expected_time_rate": 0.975,
+        "minimum_hard_deadline_slack_s": 205.960771185637,
+        "minimum_energy_margin_kwh": 0.03854697867147294
+      },
+      "reported_energy_kwh": 65.53556288136132,
+      "reported_makespan_s": 8814.630285736439,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 22,
+          "box_count": 80,
+          "multi_stop_trip_count": 2,
+          "makespan_s": 8814.630285736434,
+          "total_energy_kwh": 65.53556288135908,
+          "weighted_delay": 2230.8508472979156,
+          "on_expected_time_count": 78,
+          "on_expected_time_rate": 0.975,
+          "minimum_hard_deadline_slack_s": 206.29936674900546,
+          "minimum_energy_margin_kwh": 0.041959919293270254
+        }
+      },
+      "external_radius_max_duration_difference_s": 9.890754881780595e-11,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 22,
+          "box_count": 80,
+          "multi_stop_trip_count": 2,
+          "makespan_s": 8816.924906828994,
+          "total_energy_kwh": 65.60570599981736,
+          "weighted_delay": 2233.224572507188,
+          "on_expected_time_count": 78,
+          "on_expected_time_rate": 0.975,
+          "minimum_hard_deadline_slack_s": 205.84345025104358,
+          "minimum_energy_margin_kwh": 0.03854697867147294
+        }
+      }
+    },
+    "Q2_moead_schedule_P008": {
+      "feasible": false,
+      "violation_count": 13,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000248"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000158"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000215"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000241"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000262"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000217"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000269"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000227"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000660"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000590"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000438"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R007361"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B01",
+          "trip": "R000575"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 22,
+        "box_count": 80,
+        "multi_stop_trip_count": 2,
+        "makespan_s": 8677.63349962541,
+        "total_energy_kwh": 65.62027305674069,
+        "weighted_delay": 5921.961338944875,
+        "on_expected_time_count": 78,
+        "on_expected_time_rate": 0.975,
+        "minimum_hard_deadline_slack_s": 205.960771185637,
+        "minimum_energy_margin_kwh": 0.03854697867147294
+      },
+      "reported_energy_kwh": 65.55011735226219,
+      "reported_makespan_s": 8676.778736614857,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 22,
+          "box_count": 80,
+          "multi_stop_trip_count": 2,
+          "makespan_s": 8676.778736614851,
+          "total_energy_kwh": 65.55011735225997,
+          "weighted_delay": 5910.850847297916,
+          "on_expected_time_count": 78,
+          "on_expected_time_rate": 0.975,
+          "minimum_hard_deadline_slack_s": 206.29936674900546,
+          "minimum_energy_margin_kwh": 0.041959919293270254
+        }
+      },
+      "external_radius_max_duration_difference_s": 9.890754881780595e-11,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 22,
+          "box_count": 80,
+          "multi_stop_trip_count": 2,
+          "makespan_s": 8679.735333683731,
+          "total_energy_kwh": 65.62027305674069,
+          "weighted_delay": 3524.286092660186,
+          "on_expected_time_count": 78,
+          "on_expected_time_rate": 0.975,
+          "minimum_hard_deadline_slack_s": 205.84345025104358,
+          "minimum_energy_margin_kwh": 0.03854697867147294
+        }
+      }
+    },
+    "Q2_moead_schedule_P009": {
+      "feasible": false,
+      "violation_count": 9,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R003841"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000269"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000228"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000575"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000490"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000543"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "A-B03",
+          "trip": "R071595"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B03",
+          "trip": "R029122"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B04",
+          "trip": "R000606"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 22,
+        "box_count": 80,
+        "multi_stop_trip_count": 4,
+        "makespan_s": 8662.351266022946,
+        "total_energy_kwh": 65.9255114916127,
+        "weighted_delay": 40340.01625010171,
+        "on_expected_time_count": 75,
+        "on_expected_time_rate": 0.9375,
+        "minimum_hard_deadline_slack_s": 503.3239839838816,
+        "minimum_energy_margin_kwh": 0.1895493558598309
+      },
+      "reported_energy_kwh": 65.8551392720351,
+      "reported_makespan_s": 8661.397060621832,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 22,
+          "box_count": 80,
+          "multi_stop_trip_count": 4,
+          "makespan_s": 8661.397060621708,
+          "total_energy_kwh": 65.85513927203262,
+          "weighted_delay": 40311.29895070511,
+          "on_expected_time_count": 75,
+          "on_expected_time_rate": 0.9375,
+          "minimum_hard_deadline_slack_s": 503.7735037548655,
+          "minimum_energy_margin_kwh": 0.1961846083259724
+        }
+      },
+      "external_radius_max_duration_difference_s": 1.241460267920047e-10,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 22,
+          "box_count": 80,
+          "multi_stop_trip_count": 4,
+          "makespan_s": 8665.113349503543,
+          "total_energy_kwh": 65.9255114916127,
+          "weighted_delay": 37398.70749012654,
+          "on_expected_time_count": 76,
+          "on_expected_time_rate": 0.95,
+          "minimum_hard_deadline_slack_s": 502.28624381260033,
+          "minimum_energy_margin_kwh": 0.1895493558598309
+        }
+      }
+    },
+    "Q2_moead_schedule_P010": {
+      "feasible": false,
+      "violation_count": 12,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000248"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R003841"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000241"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000262"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000269"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000215"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000223"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000438"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R012646"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000490"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000543"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B04",
+          "trip": "R000604"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 22,
+        "box_count": 80,
+        "multi_stop_trip_count": 3,
+        "makespan_s": 8617.63349962541,
+        "total_energy_kwh": 66.83421232941802,
+        "weighted_delay": 0.0,
+        "on_expected_time_count": 80,
+        "on_expected_time_rate": 1.0,
+        "minimum_hard_deadline_slack_s": 202.53133953270344,
+        "minimum_energy_margin_kwh": 0.03854697867147294
+      },
+      "reported_energy_kwh": 66.76273009112485,
+      "reported_makespan_s": 8616.778736614857,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 22,
+          "box_count": 80,
+          "multi_stop_trip_count": 3,
+          "makespan_s": 8616.778736614851,
+          "total_energy_kwh": 66.76273009112262,
+          "weighted_delay": 0.0,
+          "on_expected_time_count": 80,
+          "on_expected_time_rate": 1.0,
+          "minimum_hard_deadline_slack_s": 203.08662137739702,
+          "minimum_energy_margin_kwh": 0.041959919293270254
+        }
+      },
+      "external_radius_max_duration_difference_s": 9.890754881780595e-11,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 22,
+          "box_count": 80,
+          "multi_stop_trip_count": 3,
+          "makespan_s": 8619.735333683731,
+          "total_energy_kwh": 66.83421232941802,
+          "weighted_delay": 0.0,
+          "on_expected_time_count": 80,
+          "on_expected_time_rate": 1.0,
+          "minimum_hard_deadline_slack_s": 202.3728819039775,
+          "minimum_energy_margin_kwh": 0.03854697867147294
+        }
+      }
+    },
+    "Q2_moead_schedule_P011": {
+      "feasible": false,
+      "violation_count": 11,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U03",
+          "trip": "R071595"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000262"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000217"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000241"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000248"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R003841"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000438"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R012646"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000490"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000543"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B04",
+          "trip": "R000604"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 22,
+        "box_count": 80,
+        "multi_stop_trip_count": 3,
+        "makespan_s": 8416.962196563587,
+        "total_energy_kwh": 67.16667023276372,
+        "weighted_delay": 0.0,
+        "on_expected_time_count": 80,
+        "on_expected_time_rate": 1.0,
+        "minimum_hard_deadline_slack_s": 202.53133953270344,
+        "minimum_energy_margin_kwh": 0.03854697867147294
+      },
+      "reported_energy_kwh": 67.09482082510358,
+      "reported_makespan_s": 8415.620073751352,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 22,
+          "box_count": 80,
+          "multi_stop_trip_count": 3,
+          "makespan_s": 8415.620073751346,
+          "total_energy_kwh": 67.09482082510135,
+          "weighted_delay": 0.0,
+          "on_expected_time_count": 80,
+          "on_expected_time_rate": 1.0,
+          "minimum_hard_deadline_slack_s": 203.08662137739702,
+          "minimum_energy_margin_kwh": 0.041959919293270254
+        }
+      },
+      "external_radius_max_duration_difference_s": 9.890754881780595e-11,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 22,
+          "box_count": 80,
+          "multi_stop_trip_count": 3,
+          "makespan_s": 8417.525358241703,
+          "total_energy_kwh": 67.16667023276374,
+          "weighted_delay": 0.0,
+          "on_expected_time_count": 80,
+          "on_expected_time_rate": 1.0,
+          "minimum_hard_deadline_slack_s": 202.3728819039775,
+          "minimum_energy_margin_kwh": 0.03854697867147294
+        }
+      }
+    },
+    "Q2_moead_schedule_P012": {
+      "feasible": false,
+      "violation_count": 11,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000234"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000269"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000241"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000248"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R005161"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R003841"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000438"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R012646"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000490"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000543"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B04",
+          "trip": "R000606"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 22,
+        "box_count": 80,
+        "multi_stop_trip_count": 3,
+        "makespan_s": 8407.8365721046,
+        "total_energy_kwh": 67.80700117068388,
+        "weighted_delay": 27415.83848474092,
+        "on_expected_time_count": 77,
+        "on_expected_time_rate": 0.9625,
+        "minimum_hard_deadline_slack_s": 202.53133953270344,
+        "minimum_energy_margin_kwh": 0.03243874896773846
+      },
+      "reported_energy_kwh": 67.73446935936497,
+      "reported_makespan_s": 8407.044640635813,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 22,
+          "box_count": 80,
+          "multi_stop_trip_count": 3,
+          "makespan_s": 8407.044640635786,
+          "total_energy_kwh": 67.73446935936266,
+          "weighted_delay": 27401.273806080007,
+          "on_expected_time_count": 77,
+          "on_expected_time_rate": 0.9625,
+          "minimum_hard_deadline_slack_s": 203.08662137739702,
+          "minimum_energy_margin_kwh": 0.035797736257809465
+        }
+      },
+      "external_radius_max_duration_difference_s": 9.890754881780595e-11,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 22,
+          "box_count": 80,
+          "multi_stop_trip_count": 3,
+          "makespan_s": 8410.418681603842,
+          "total_energy_kwh": 67.80700117068388,
+          "weighted_delay": 19384.649639776082,
+          "on_expected_time_count": 77,
+          "on_expected_time_rate": 0.9625,
+          "minimum_hard_deadline_slack_s": 202.3728819039775,
+          "minimum_energy_margin_kwh": 0.03243874896773846
+        }
+      }
+    },
+    "Q2_moead_schedule_P013": {
+      "feasible": false,
+      "violation_count": 13,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000234"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000158"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000241"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000248"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R003841"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000187"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000326"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000516"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000490"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000575"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B01",
+          "trip": "R000683"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B01",
+          "trip": "R000280"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B04",
+          "trip": "R000606"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 23,
+        "box_count": 80,
+        "multi_stop_trip_count": 1,
+        "makespan_s": 8956.883741195285,
+        "total_energy_kwh": 64.12365544390236,
+        "weighted_delay": 56616.71854372058,
+        "on_expected_time_count": 76,
+        "on_expected_time_rate": 0.95,
+        "minimum_hard_deadline_slack_s": 202.53133953270344,
+        "minimum_energy_margin_kwh": 0.21179200885197247
+      },
+      "reported_energy_kwh": 64.05514828822537,
+      "reported_makespan_s": 8956.426177517465,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 23,
+          "box_count": 80,
+          "multi_stop_trip_count": 1,
+          "makespan_s": 8956.426177517442,
+          "total_energy_kwh": 64.05514828822305,
+          "weighted_delay": 56607.47942765587,
+          "on_expected_time_count": 76,
+          "on_expected_time_rate": 0.95,
+          "minimum_hard_deadline_slack_s": 203.08662137739702,
+          "minimum_energy_margin_kwh": 0.21858644992990506
+        }
+      },
+      "external_radius_max_duration_difference_s": 9.890754881780595e-11,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 23,
+          "box_count": 80,
+          "multi_stop_trip_count": 1,
+          "makespan_s": 8959.521973804203,
+          "total_energy_kwh": 64.12365544390235,
+          "weighted_delay": 53532.56455897641,
+          "on_expected_time_count": 76,
+          "on_expected_time_rate": 0.95,
+          "minimum_hard_deadline_slack_s": 202.3728819039775,
+          "minimum_energy_margin_kwh": 0.21179200885197247
+        }
+      }
+    },
+    "Q2_moead_schedule_P014": {
+      "feasible": false,
+      "violation_count": 11,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000234"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R003841"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000269"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000248"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000115"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000575"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000490"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000516"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B01",
+          "trip": "R000683"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B01",
+          "trip": "R000278"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B04",
+          "trip": "R000606"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 23,
+        "box_count": 80,
+        "multi_stop_trip_count": 1,
+        "makespan_s": 8923.883741195285,
+        "total_energy_kwh": 64.1852317561001,
+        "weighted_delay": 42333.80611792931,
+        "on_expected_time_count": 77,
+        "on_expected_time_rate": 0.9625,
+        "minimum_hard_deadline_slack_s": 191.36365725706492,
+        "minimum_energy_margin_kwh": 0.21179200885197247
+      },
+      "reported_energy_kwh": 64.11664047987138,
+      "reported_makespan_s": 8923.426177517465,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 23,
+          "box_count": 80,
+          "multi_stop_trip_count": 1,
+          "makespan_s": 8923.426177517442,
+          "total_energy_kwh": 64.11664047986912,
+          "weighted_delay": 42326.94266276161,
+          "on_expected_time_count": 77,
+          "on_expected_time_rate": 0.9625,
+          "minimum_hard_deadline_slack_s": 191.90592926842692,
+          "minimum_energy_margin_kwh": 0.21858644992990506
+        }
+      },
+      "external_radius_max_duration_difference_s": 9.890754881780595e-11,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 23,
+          "box_count": 80,
+          "multi_stop_trip_count": 1,
+          "makespan_s": 8927.304534463521,
+          "total_energy_kwh": 64.18523175610008,
+          "weighted_delay": 42436.429915976296,
+          "on_expected_time_count": 77,
+          "on_expected_time_rate": 0.9625,
+          "minimum_hard_deadline_slack_s": 195.17706945720965,
+          "minimum_energy_margin_kwh": 0.21179200885197247
+        }
+      }
+    },
+    "Q2_moead_schedule_P015": {
+      "feasible": false,
+      "violation_count": 13,
+      "violations": [
+        {
+          "type": "hard_deadline",
+          "items": [
+            "S004-MED-01",
+            "S004-WAT-01"
+          ]
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U02",
+          "trip": "R071594"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R003841"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000269"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000223"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000248"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R006179"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000543"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000438"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000575"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "A-B02",
+          "trip": "R000083"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "B-B04",
+          "trip": "R000199"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B03",
+          "trip": "R000606"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": false,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 23,
+        "box_count": 80,
+        "multi_stop_trip_count": 3,
+        "makespan_s": 8809.63349962541,
+        "total_energy_kwh": 64.60040010520149,
+        "weighted_delay": 7.024721818788748,
+        "on_expected_time_count": 76,
+        "on_expected_time_rate": 0.95,
+        "minimum_hard_deadline_slack_s": -0.14049443637577497,
+        "minimum_energy_margin_kwh": 0.1895493558598309
+      },
+      "reported_energy_kwh": 64.53151269293168,
+      "reported_makespan_s": 8808.778736614857,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 23,
+          "box_count": 80,
+          "multi_stop_trip_count": 3,
+          "makespan_s": 8808.778736614851,
+          "total_energy_kwh": 64.53151269292961,
+          "weighted_delay": 0.0,
+          "on_expected_time_count": 80,
+          "on_expected_time_rate": 1.0,
+          "minimum_hard_deadline_slack_s": 0.4379675160962506,
+          "minimum_energy_margin_kwh": 0.1961846083259724
+        }
+      },
+      "external_radius_max_duration_difference_s": 1.23463905765675e-10,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 23,
+          "box_count": 80,
+          "multi_stop_trip_count": 3,
+          "makespan_s": 8811.143271828927,
+          "total_energy_kwh": 64.60040010520149,
+          "weighted_delay": 0.0,
+          "on_expected_time_count": 80,
+          "on_expected_time_rate": 1.0,
+          "minimum_hard_deadline_slack_s": 86.84917241503854,
+          "minimum_energy_margin_kwh": 0.1895493558598309
+        }
+      }
+    },
+    "Q2_moead_schedule_P016": {
+      "feasible": false,
+      "violation_count": 12,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U03",
+          "trip": "R071594"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000269"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000228"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000223"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000262"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000241"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000438"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000280"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000490"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000543"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "B-B04",
+          "trip": "R003841"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B01",
+          "trip": "R000683"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 23,
+        "box_count": 80,
+        "multi_stop_trip_count": 3,
+        "makespan_s": 8608.051067070412,
+        "total_energy_kwh": 64.64633586308595,
+        "weighted_delay": 27993.806117929278,
+        "on_expected_time_count": 77,
+        "on_expected_time_rate": 0.9625,
+        "minimum_hard_deadline_slack_s": 44.873129402357335,
+        "minimum_energy_margin_kwh": 0.1895493558598309
+      },
+      "reported_energy_kwh": 64.57739797726751,
+      "reported_makespan_s": 8607.630285736439,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 23,
+          "box_count": 80,
+          "multi_stop_trip_count": 3,
+          "makespan_s": 8607.630285736434,
+          "total_energy_kwh": 64.57739797726542,
+          "weighted_delay": 27986.94266276164,
+          "on_expected_time_count": 77,
+          "on_expected_time_rate": 0.9625,
+          "minimum_hard_deadline_slack_s": 45.101911241278685,
+          "minimum_energy_margin_kwh": 0.1961846083259724
+        }
+      },
+      "external_radius_max_duration_difference_s": 9.890754881780595e-11,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 23,
+          "box_count": 80,
+          "multi_stop_trip_count": 3,
+          "makespan_s": 8610.890358155646,
+          "total_energy_kwh": 64.64633586308595,
+          "weighted_delay": 28095.136422626783,
+          "on_expected_time_count": 77,
+          "on_expected_time_rate": 0.9625,
+          "minimum_hard_deadline_slack_s": 44.53214052960584,
+          "minimum_energy_margin_kwh": 0.1895493558598309
+        }
+      }
+    },
+    "Q2_moead_schedule_P017": {
+      "feasible": false,
+      "violation_count": 8,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R006179"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000199"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R004168"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R003841"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000575"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000438"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000543"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B04",
+          "trip": "R000280"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 23,
+        "box_count": 80,
+        "multi_stop_trip_count": 3,
+        "makespan_s": 8040.051067070412,
+        "total_energy_kwh": 64.9328580085472,
+        "weighted_delay": 17097.907611210438,
+        "on_expected_time_count": 75,
+        "on_expected_time_rate": 0.9375,
+        "minimum_hard_deadline_slack_s": 227.09296755979904,
+        "minimum_energy_margin_kwh": 0.1895493558598309
+      },
+      "reported_energy_kwh": 64.86360342691042,
+      "reported_makespan_s": 8039.630285736439,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 23,
+          "box_count": 80,
+          "multi_stop_trip_count": 3,
+          "makespan_s": 8039.6302857364335,
+          "total_energy_kwh": 64.86360342690834,
+          "weighted_delay": 17079.911204965712,
+          "on_expected_time_count": 75,
+          "on_expected_time_rate": 0.9375,
+          "minimum_hard_deadline_slack_s": 227.63523957116104,
+          "minimum_energy_margin_kwh": 0.1961846083259724
+        }
+      },
+      "external_radius_max_duration_difference_s": 1.23463905765675e-10,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 23,
+          "box_count": 80,
+          "multi_stop_trip_count": 3,
+          "makespan_s": 8040.497898377545,
+          "total_energy_kwh": 64.9328580085472,
+          "weighted_delay": 17188.622531435693,
+          "on_expected_time_count": 75,
+          "on_expected_time_rate": 0.9375,
+          "minimum_hard_deadline_slack_s": 225.90113466766252,
+          "minimum_energy_margin_kwh": 0.1895493558598309
+        }
+      }
+    },
+    "Q2_moead_schedule_P018": {
+      "feasible": false,
+      "violation_count": 11,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U03",
+          "trip": "R071595"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000203"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000199"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R004168"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000269"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R003841"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000543"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000438"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000575"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "A-B03",
+          "trip": "R000083"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B03",
+          "trip": "R000606"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 23,
+        "box_count": 80,
+        "multi_stop_trip_count": 3,
+        "makespan_s": 7971.764692772957,
+        "total_energy_kwh": 64.97711675450057,
+        "weighted_delay": 3464.1014932811595,
+        "on_expected_time_count": 78,
+        "on_expected_time_rate": 0.975,
+        "minimum_hard_deadline_slack_s": 286.8595055636242,
+        "minimum_energy_margin_kwh": 0.1895493558598309
+      },
+      "reported_energy_kwh": 64.90781855889624,
+      "reported_makespan_s": 7970.652763374452,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 23,
+          "box_count": 80,
+          "multi_stop_trip_count": 3,
+          "makespan_s": 7970.652763374408,
+          "total_energy_kwh": 64.90781855889419,
+          "weighted_delay": 3452.968542204071,
+          "on_expected_time_count": 78,
+          "on_expected_time_rate": 0.975,
+          "minimum_hard_deadline_slack_s": 287.43796751609625,
+          "minimum_energy_margin_kwh": 0.1961846083259724
+        }
+      },
+      "external_radius_max_duration_difference_s": 1.23463905765675e-10,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 23,
+          "box_count": 80,
+          "multi_stop_trip_count": 3,
+          "makespan_s": 7973.410650077971,
+          "total_energy_kwh": 64.97711675450057,
+          "weighted_delay": 3497.0206393814624,
+          "on_expected_time_count": 78,
+          "on_expected_time_rate": 0.975,
+          "minimum_hard_deadline_slack_s": 285.6676726714877,
+          "minimum_energy_margin_kwh": 0.1895493558598309
+        }
+      }
+    },
+    "Q2_moead_schedule_P019": {
+      "feasible": false,
+      "violation_count": 12,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U04",
+          "trip": "R071594"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000203"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000241"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R004168"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R003841"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000199"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000575"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000438"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000543"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "B-B01",
+          "trip": "R000228"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "B-B03",
+          "trip": "R000269"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B04",
+          "trip": "R000280"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 23,
+        "box_count": 80,
+        "multi_stop_trip_count": 3,
+        "makespan_s": 7946.051067070412,
+        "total_energy_kwh": 64.97879376643166,
+        "weighted_delay": 14864.54311432486,
+        "on_expected_time_count": 76,
+        "on_expected_time_rate": 0.95,
+        "minimum_hard_deadline_slack_s": 227.09296755979904,
+        "minimum_energy_margin_kwh": 0.1895493558598309
+      },
+      "reported_energy_kwh": 64.90948871124624,
+      "reported_makespan_s": 7945.630285736439,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 23,
+          "box_count": 80,
+          "multi_stop_trip_count": 3,
+          "makespan_s": 7945.6302857364335,
+          "total_energy_kwh": 64.90948871124415,
+          "weighted_delay": 14854.293703523535,
+          "on_expected_time_count": 76,
+          "on_expected_time_rate": 0.95,
+          "minimum_hard_deadline_slack_s": 227.63523957116104,
+          "minimum_energy_margin_kwh": 0.1961846083259724
+        }
+      },
+      "external_radius_max_duration_difference_s": 9.890754881780595e-11,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 23,
+          "box_count": 80,
+          "multi_stop_trip_count": 3,
+          "makespan_s": 7948.427254607826,
+          "total_energy_kwh": 64.97879376643166,
+          "weighted_delay": 13460.336356036232,
+          "on_expected_time_count": 76,
+          "on_expected_time_rate": 0.95,
+          "minimum_hard_deadline_slack_s": 225.90113466766252,
+          "minimum_energy_margin_kwh": 0.1895493558598309
+        }
+      }
+    },
+    "Q2_moead_schedule_P020": {
+      "feasible": false,
+      "violation_count": 10,
+      "violations": [
+        {
+          "type": "hard_deadline",
+          "items": [
+            "S012-MED-01",
+            "S012-WAT-01"
+          ]
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000199"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000248"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000269"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000575"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000438"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000543"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "B-B01",
+          "trip": "R000241"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "B-B04",
+          "trip": "R000136"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B04",
+          "trip": "R000280"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": false,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 23,
+        "box_count": 80,
+        "multi_stop_trip_count": 2,
+        "makespan_s": 7929.883741195285,
+        "total_energy_kwh": 64.98167884536592,
+        "weighted_delay": 14027.189085283931,
+        "on_expected_time_count": 74,
+        "on_expected_time_rate": 0.925,
+        "minimum_hard_deadline_slack_s": -0.38255043139133704,
+        "minimum_energy_margin_kwh": 0.1895493558598309
+      },
+      "reported_energy_kwh": 64.91234722330006,
+      "reported_makespan_s": 7929.4261775174655,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 23,
+          "box_count": 80,
+          "multi_stop_trip_count": 2,
+          "makespan_s": 7929.426177517443,
+          "total_energy_kwh": 64.91234722329803,
+          "weighted_delay": 14004.629388045714,
+          "on_expected_time_count": 75,
+          "on_expected_time_rate": 0.9375,
+          "minimum_hard_deadline_slack_s": 0.16998095127746637,
+          "minimum_energy_margin_kwh": 0.1961846083259724
+        }
+      },
+      "external_radius_max_duration_difference_s": 1.23463905765675e-10,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 23,
+          "box_count": 80,
+          "multi_stop_trip_count": 2,
+          "makespan_s": 7932.143965170401,
+          "total_energy_kwh": 64.9816788453659,
+          "weighted_delay": 12581.612837182756,
+          "on_expected_time_count": 77,
+          "on_expected_time_rate": 0.9625,
+          "minimum_hard_deadline_slack_s": 86.84917241503854,
+          "minimum_energy_margin_kwh": 0.1895493558598309
+        }
+      }
+    },
+    "Q2_moead_schedule_P021": {
+      "feasible": false,
+      "violation_count": 10,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000203"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000241"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000262"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R003841"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000223"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000575"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000490"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000543"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "A-B01",
+          "trip": "R071595"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B04",
+          "trip": "R000280"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 23,
+        "box_count": 80,
+        "multi_stop_trip_count": 4,
+        "makespan_s": 7821.340988872751,
+        "total_energy_kwh": 65.75678030996484,
+        "weighted_delay": 2913.80611792928,
+        "on_expected_time_count": 77,
+        "on_expected_time_rate": 0.9625,
+        "minimum_hard_deadline_slack_s": 63.74050927372946,
+        "minimum_energy_margin_kwh": 0.1895493558598309
+      },
+      "reported_energy_kwh": 65.68664388252726,
+      "reported_makespan_s": 7820.184064967842,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 23,
+          "box_count": 80,
+          "multi_stop_trip_count": 4,
+          "makespan_s": 7820.184064967807,
+          "total_energy_kwh": 65.68664388252495,
+          "weighted_delay": 2906.9426627616394,
+          "on_expected_time_count": 77,
+          "on_expected_time_rate": 0.9625,
+          "minimum_hard_deadline_slack_s": 64.14460765662625,
+          "minimum_energy_margin_kwh": 0.1961846083259724
+        }
+      },
+      "external_radius_max_duration_difference_s": 9.890754881780595e-11,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 23,
+          "box_count": 80,
+          "multi_stop_trip_count": 4,
+          "makespan_s": 7822.030962259409,
+          "total_energy_kwh": 65.75678030996482,
+          "weighted_delay": 2996.6686223471515,
+          "on_expected_time_count": 77,
+          "on_expected_time_rate": 0.9625,
+          "minimum_hard_deadline_slack_s": 98.16953217696755,
+          "minimum_energy_margin_kwh": 0.1895493558598309
+        }
+      }
+    },
+    "Q2_moead_schedule_P022": {
+      "feasible": false,
+      "violation_count": 10,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U04",
+          "trip": "R071595"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000262"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000269"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000234"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R005826"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R003841"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000490"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000543"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000438"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B03",
+          "trip": "R000280"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 23,
+        "box_count": 80,
+        "multi_stop_trip_count": 3,
+        "makespan_s": 7610.340988872751,
+        "total_energy_kwh": 66.19395031595936,
+        "weighted_delay": 40109.543109389044,
+        "on_expected_time_count": 76,
+        "on_expected_time_rate": 0.95,
+        "minimum_hard_deadline_slack_s": 309.8595055636242,
+        "minimum_energy_margin_kwh": 0.03854697867147294
+      },
+      "reported_energy_kwh": 66.1232727113154,
+      "reported_makespan_s": 7609.4261775174655,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 23,
+          "box_count": 80,
+          "multi_stop_trip_count": 3,
+          "makespan_s": 7609.426177517443,
+          "total_energy_kwh": 66.12327271131319,
+          "weighted_delay": 40099.24792663758,
+          "on_expected_time_count": 76,
+          "on_expected_time_rate": 0.95,
+          "minimum_hard_deadline_slack_s": 310.43796751609625,
+          "minimum_energy_margin_kwh": 0.041959919293270254
+        }
+      },
+      "external_radius_max_duration_difference_s": 9.890754881780595e-11,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 23,
+          "box_count": 80,
+          "multi_stop_trip_count": 3,
+          "makespan_s": 7612.645824675881,
+          "total_energy_kwh": 66.19395031595936,
+          "weighted_delay": 13440.343051824373,
+          "on_expected_time_count": 76,
+          "on_expected_time_rate": 0.95,
+          "minimum_hard_deadline_slack_s": 328.9807346350144,
+          "minimum_energy_margin_kwh": 0.03854697867147294
+        }
+      }
+    },
+    "Q2_moead_schedule_P023": {
+      "feasible": false,
+      "violation_count": 14,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U03",
+          "trip": "R001706"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U04",
+          "trip": "R071595"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000262"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000269"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000215"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000234"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R005826"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R003841"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000575"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000604"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000543"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "A-B03",
+          "trip": "R000025"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "A-B04",
+          "trip": "R071593"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B03",
+          "trip": "R000280"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 24,
+        "box_count": 80,
+        "multi_stop_trip_count": 3,
+        "makespan_s": 7590.836572104598,
+        "total_energy_kwh": 67.27264226009049,
+        "weighted_delay": 933.8061179292799,
+        "on_expected_time_count": 77,
+        "on_expected_time_rate": 0.9625,
+        "minimum_hard_deadline_slack_s": 343.2233920025119,
+        "minimum_energy_margin_kwh": 0.03854697867147294
+      },
+      "reported_energy_kwh": 67.20084350281226,
+      "reported_makespan_s": 7590.044640635813,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 24,
+          "box_count": 80,
+          "multi_stop_trip_count": 3,
+          "makespan_s": 7590.044640635786,
+          "total_energy_kwh": 67.20084350280992,
+          "weighted_delay": 926.9426627616394,
+          "on_expected_time_count": 77,
+          "on_expected_time_rate": 0.9625,
+          "minimum_hard_deadline_slack_s": 343.82902408724385,
+          "minimum_energy_margin_kwh": 0.041959919293270254
+        }
+      },
+      "external_radius_max_duration_difference_s": 9.890754881780595e-11,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 24,
+          "box_count": 80,
+          "multi_stop_trip_count": 3,
+          "makespan_s": 7591.219759801362,
+          "total_energy_kwh": 67.27264226009049,
+          "weighted_delay": 0.0,
+          "on_expected_time_count": 80,
+          "on_expected_time_rate": 1.0,
+          "minimum_hard_deadline_slack_s": 341.4406109882848,
+          "minimum_energy_margin_kwh": 0.03854697867147294
+        }
+      }
+    },
+    "Q2_moead_schedule_P024": {
+      "feasible": false,
+      "violation_count": 11,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U02",
+          "trip": "R071594"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000234"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000262"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R003841"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000115"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000543"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000660"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000575"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000604"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "A-B02",
+          "trip": "R000074"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B04",
+          "trip": "R000278"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 25,
+        "box_count": 80,
+        "multi_stop_trip_count": 3,
+        "makespan_s": 7589.836572104598,
+        "total_energy_kwh": 69.08684502838267,
+        "weighted_delay": 38293.2801008488,
+        "on_expected_time_count": 75,
+        "on_expected_time_rate": 0.9375,
+        "minimum_hard_deadline_slack_s": 146.74050927372946,
+        "minimum_energy_margin_kwh": 0.03854697867147294
+      },
+      "reported_energy_kwh": 69.01309617578711,
+      "reported_makespan_s": 7589.044640635813,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 25,
+          "box_count": 80,
+          "multi_stop_trip_count": 3,
+          "makespan_s": 7589.044640635786,
+          "total_energy_kwh": 69.0130961757847,
+          "weighted_delay": 38279.553190513514,
+          "on_expected_time_count": 75,
+          "on_expected_time_rate": 0.9375,
+          "minimum_hard_deadline_slack_s": 147.14460765662625,
+          "minimum_energy_margin_kwh": 0.041959919293270254
+        }
+      },
+      "external_radius_max_duration_difference_s": 9.890754881780595e-11,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 25,
+          "box_count": 80,
+          "multi_stop_trip_count": 3,
+          "makespan_s": 7590.674450216154,
+          "total_energy_kwh": 69.08684502838267,
+          "weighted_delay": 12625.25549095395,
+          "on_expected_time_count": 79,
+          "on_expected_time_rate": 0.9875,
+          "minimum_hard_deadline_slack_s": 146.51215457825174,
+          "minimum_energy_margin_kwh": 0.03854697867147294
+        }
+      }
+    },
+    "Q2_moead_schedule_P025": {
+      "feasible": false,
+      "violation_count": 14,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U02",
+          "trip": "R001706"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U04",
+          "trip": "R071595"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000248"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000215"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R003841"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000262"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000269"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000199"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000575"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000604"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000490"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000543"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "A-B02",
+          "trip": "R000025"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B03",
+          "trip": "R000280"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 25,
+        "box_count": 80,
+        "multi_stop_trip_count": 3,
+        "makespan_s": 7477.883741195285,
+        "total_energy_kwh": 69.22242759609328,
+        "weighted_delay": 11011.736991459762,
+        "on_expected_time_count": 79,
+        "on_expected_time_rate": 0.9875,
+        "minimum_hard_deadline_slack_s": 681.5313395327034,
+        "minimum_energy_margin_kwh": 0.03854697867147294
+      },
+      "reported_energy_kwh": 69.1486059058995,
+      "reported_makespan_s": 7477.4261775174655,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 25,
+          "box_count": 80,
+          "multi_stop_trip_count": 3,
+          "makespan_s": 7477.426177517443,
+          "total_energy_kwh": 69.14860590589699,
+          "weighted_delay": 11008.305263875936,
+          "on_expected_time_count": 79,
+          "on_expected_time_rate": 0.9875,
+          "minimum_hard_deadline_slack_s": 682.086621377397,
+          "minimum_energy_margin_kwh": 0.041959919293270254
+        }
+      },
+      "external_radius_max_duration_difference_s": 9.890754881780595e-11,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 25,
+          "box_count": 80,
+          "multi_stop_trip_count": 3,
+          "makespan_s": 7480.645824675881,
+          "total_energy_kwh": 69.22242759609328,
+          "weighted_delay": 0.0,
+          "on_expected_time_count": 80,
+          "on_expected_time_rate": 1.0,
+          "minimum_hard_deadline_slack_s": 681.1929079226252,
+          "minimum_energy_margin_kwh": 0.03854697867147294
+        }
+      }
+    },
+    "Q2_moead_schedule_P026": {
+      "feasible": false,
+      "violation_count": 8,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R003841"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000269"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000248"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000215"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000217"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000575"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000604"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "A-B03",
+          "trip": "R001706"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 25,
+        "box_count": 80,
+        "multi_stop_trip_count": 4,
+        "makespan_s": 7308.472032032237,
+        "total_energy_kwh": 70.25387527092214,
+        "weighted_delay": 0.0,
+        "on_expected_time_count": 80,
+        "on_expected_time_rate": 1.0,
+        "minimum_hard_deadline_slack_s": 503.3239839838816,
+        "minimum_energy_margin_kwh": 0.03854697867147294
+      },
+      "reported_energy_kwh": 70.17892915873988,
+      "reported_makespan_s": 7307.57299249031,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 25,
+          "box_count": 80,
+          "multi_stop_trip_count": 4,
+          "makespan_s": 7307.572992490268,
+          "total_energy_kwh": 70.17892915873728,
+          "weighted_delay": 0.0,
+          "on_expected_time_count": 80,
+          "on_expected_time_rate": 1.0,
+          "minimum_hard_deadline_slack_s": 503.7735037548655,
+          "minimum_energy_margin_kwh": 0.041959919293270254
+        }
+      },
+      "external_radius_max_duration_difference_s": 1.6689227777533233e-10,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 25,
+          "box_count": 80,
+          "multi_stop_trip_count": 4,
+          "makespan_s": 7309.509772203518,
+          "total_energy_kwh": 70.25387527092212,
+          "weighted_delay": 0.0,
+          "on_expected_time_count": 80,
+          "on_expected_time_rate": 1.0,
+          "minimum_hard_deadline_slack_s": 502.28624381260033,
+          "minimum_energy_margin_kwh": 0.03854697867147294
+        }
+      }
+    },
+    "Q2_moead_schedule_P027": {
+      "feasible": false,
+      "violation_count": 12,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U01",
+          "trip": "R071593"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U02",
+          "trip": "R000025"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U03",
+          "trip": "R071595"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000269"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000215"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000248"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R003841"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000543"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000438"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000280"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "A-B03",
+          "trip": "R071594"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B01",
+          "trip": "R000604"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 25,
+        "box_count": 80,
+        "multi_stop_trip_count": 4,
+        "makespan_s": 6869.099882661642,
+        "total_energy_kwh": 70.67631472165525,
+        "weighted_delay": 36963.473982919524,
+        "on_expected_time_count": 78,
+        "on_expected_time_rate": 0.975,
+        "minimum_hard_deadline_slack_s": 369.0023314889809,
+        "minimum_energy_margin_kwh": 0.03854697867147294
+      },
+      "reported_energy_kwh": 70.60094100190096,
+      "reported_makespan_s": 6867.888618492203,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 25,
+          "box_count": 80,
+          "multi_stop_trip_count": 4,
+          "makespan_s": 6867.888618492179,
+          "total_energy_kwh": 70.60094100189832,
+          "weighted_delay": 36956.61052775187,
+          "on_expected_time_count": 78,
+          "on_expected_time_rate": 0.975,
+          "minimum_hard_deadline_slack_s": 369.4549707143724,
+          "minimum_energy_margin_kwh": 0.041959919293270254
+        }
+      },
+      "external_radius_max_duration_difference_s": 1.6689227777533233e-10,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 25,
+          "box_count": 80,
+          "multi_stop_trip_count": 4,
+          "makespan_s": 6869.724400479458,
+          "total_energy_kwh": 70.67631472165525,
+          "weighted_delay": 36734.967606777005,
+          "on_expected_time_count": 78,
+          "on_expected_time_rate": 0.975,
+          "minimum_hard_deadline_slack_s": 458.2118014494008,
+          "minimum_energy_margin_kwh": 0.03854697867147294
+        }
+      }
+    },
+    "Q2_joint_schedule_E": {
+      "feasible": false,
+      "violation_count": 13,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000262"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000158"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000223"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000255"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R003841"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000660"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000606"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000438"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000575"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "B-B01",
+          "trip": "R000241"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "B-B02",
+          "trip": "R000269"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B01",
+          "trip": "R000516"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B02",
+          "trip": "R000280"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 21,
+        "box_count": 80,
+        "multi_stop_trip_count": 1,
+        "makespan_s": 9176.883741195285,
+        "total_energy_kwh": 62.304852782154036,
+        "weighted_delay": 49923.80611792931,
+        "on_expected_time_count": 77,
+        "on_expected_time_rate": 0.9625,
+        "minimum_hard_deadline_slack_s": 139.960771185637,
+        "minimum_energy_margin_kwh": 0.21179200885197247
+      },
+      "reported_energy_kwh": 62.238231589453534,
+      "reported_makespan_s": 9176.426177517464,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 21,
+          "box_count": 80,
+          "multi_stop_trip_count": 1,
+          "makespan_s": 9176.426177517442,
+          "total_energy_kwh": 62.238231589451374,
+          "weighted_delay": 49916.94266276161,
+          "on_expected_time_count": 77,
+          "on_expected_time_rate": 0.9625,
+          "minimum_hard_deadline_slack_s": 140.29936674900546,
+          "minimum_energy_margin_kwh": 0.21858644992990506
+        }
+      },
+      "external_radius_max_duration_difference_s": 9.890754881780595e-11,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 21,
+          "box_count": 80,
+          "multi_stop_trip_count": 1,
+          "makespan_s": 9179.548833421959,
+          "total_energy_kwh": 62.30485278215403,
+          "weighted_delay": 50003.75888472954,
+          "on_expected_time_count": 77,
+          "on_expected_time_rate": 0.9625,
+          "minimum_hard_deadline_slack_s": 139.84345025104358,
+          "minimum_energy_margin_kwh": 0.21179200885197247
+        }
+      }
+    },
+    "Q2_joint_schedule_N": {
+      "feasible": false,
+      "violation_count": 12,
+      "violations": [
+        {
+          "type": "hard_deadline",
+          "items": [
+            "S014-MED-01",
+            "S014-WAT-01"
+          ]
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R003726"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000234"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000269"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000241"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000227"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000438"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000575"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000490"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000543"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B01",
+          "trip": "R000590"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B04",
+          "trip": "R012646"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": false,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 20,
+        "box_count": 80,
+        "multi_stop_trip_count": 2,
+        "makespan_s": 9561.8365721046,
+        "total_energy_kwh": 64.28047726435628,
+        "weighted_delay": 15126.920006644526,
+        "on_expected_time_count": 76,
+        "on_expected_time_rate": 0.95,
+        "minimum_hard_deadline_slack_s": -0.2594907262705419,
+        "minimum_energy_margin_kwh": 0.12703493028702084
+      },
+      "reported_energy_kwh": 64.21165685008624,
+      "reported_makespan_s": 9561.044640635811,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 20,
+          "box_count": 80,
+          "multi_stop_trip_count": 2,
+          "makespan_s": 9561.044640635786,
+          "total_energy_kwh": 64.21165685008405,
+          "weighted_delay": 15116.94266276164,
+          "on_expected_time_count": 77,
+          "on_expected_time_rate": 0.9625,
+          "minimum_hard_deadline_slack_s": 0.14460765662624908,
+          "minimum_energy_margin_kwh": 0.13377779143526247
+        }
+      },
+      "external_radius_max_duration_difference_s": 9.890754881780595e-11,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 20,
+          "box_count": 80,
+          "multi_stop_trip_count": 2,
+          "makespan_s": 9564.501664331274,
+          "total_energy_kwh": 64.28047726435629,
+          "weighted_delay": 15201.269402906582,
+          "on_expected_time_count": 77,
+          "on_expected_time_rate": 0.9625,
+          "minimum_hard_deadline_slack_s": 202.3728819039775,
+          "minimum_energy_margin_kwh": 0.12703493028702084
+        }
+      }
+    },
+    "Q2_joint_schedule_T": {
+      "feasible": false,
+      "violation_count": 10,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U01",
+          "trip": "R071594"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "R000175"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000262"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R003841"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "R000199"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "R000683"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000490"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "R000543"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "A-B02",
+          "trip": "R071595"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B04",
+          "trip": "R000280"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 24,
+        "box_count": 80,
+        "multi_stop_trip_count": 4,
+        "makespan_s": 7721.051067070412,
+        "total_energy_kwh": 67.44182539210448,
+        "weighted_delay": 2984.5431143248607,
+        "on_expected_time_count": 76,
+        "on_expected_time_rate": 0.95,
+        "minimum_hard_deadline_slack_s": 117.74050927372946,
+        "minimum_energy_margin_kwh": 0.1895493558598309
+      },
+      "reported_energy_kwh": 67.36989915372476,
+      "reported_makespan_s": 7720.630285736439,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 24,
+          "box_count": 80,
+          "multi_stop_trip_count": 4,
+          "makespan_s": 7720.6302857364335,
+          "total_energy_kwh": 67.36989915372237,
+          "weighted_delay": 2974.2937035235354,
+          "on_expected_time_count": 76,
+          "on_expected_time_rate": 0.95,
+          "minimum_hard_deadline_slack_s": 118.14460765662625,
+          "minimum_energy_margin_kwh": 0.1961846083259724
+        }
+      },
+      "external_radius_max_duration_difference_s": 9.890754881780595e-11,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 24,
+          "box_count": 80,
+          "multi_stop_trip_count": 4,
+          "makespan_s": 7719.806017324852,
+          "total_energy_kwh": 67.44182539210448,
+          "weighted_delay": 3086.791799200082,
+          "on_expected_time_count": 76,
+          "on_expected_time_rate": 0.95,
+          "minimum_hard_deadline_slack_s": 116.97223212015933,
+          "minimum_energy_margin_kwh": 0.1895493558598309
+        }
+      }
+    },
+    "Q2_anchor_Cmax_schedule": {
+      "feasible": false,
+      "violation_count": 19,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U01",
+          "trip": "P000128-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U02",
+          "trip": "P002651-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U02",
+          "trip": "P000027-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U02",
+          "trip": "P000067-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U03",
+          "trip": "P000116-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "P002751-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "P002778-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "P002822-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "P002853-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "P007746-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "P007855-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "P007755-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "P007781-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "A-B01",
+          "trip": "P000110-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "A-B01",
+          "trip": "P001421-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "A-B02",
+          "trip": "P000125-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "A-B03",
+          "trip": "P000084-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "A-B05",
+          "trip": "P000099-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "A-B06",
+          "trip": "P001153-1"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 31,
+        "box_count": 80,
+        "multi_stop_trip_count": 6,
+        "makespan_s": 7367.969660086773,
+        "total_energy_kwh": 84.95499831855867,
+        "weighted_delay": 78471.01684554755,
+        "on_expected_time_count": 76,
+        "on_expected_time_rate": 0.95,
+        "minimum_hard_deadline_slack_s": 59.17199435415296,
+        "minimum_energy_margin_kwh": 0.27740695805320037
+      },
+      "reported_energy_kwh": 84.86452433146437,
+      "reported_makespan_s": 7366.758395917333,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 31,
+          "box_count": 80,
+          "multi_stop_trip_count": 6,
+          "makespan_s": 7366.758395917309,
+          "total_energy_kwh": 84.86452433146161,
+          "weighted_delay": 78441.5452896116,
+          "on_expected_time_count": 76,
+          "on_expected_time_rate": 0.95,
+          "minimum_hard_deadline_slack_s": 59.862658582489075,
+          "minimum_energy_margin_kwh": 0.2805335972456584
+        }
+      },
+      "external_radius_max_duration_difference_s": 1.23463905765675e-10,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 31,
+          "box_count": 80,
+          "multi_stop_trip_count": 6,
+          "makespan_s": 7369.085897772538,
+          "total_energy_kwh": 84.95499831855867,
+          "weighted_delay": 78528.99211412304,
+          "on_expected_time_count": 76,
+          "on_expected_time_rate": 0.95,
+          "minimum_hard_deadline_slack_s": 59.11156198597246,
+          "minimum_energy_margin_kwh": 0.27740695805320037
+        }
+      }
+    },
+    "Q2_anchor_E_schedule": {
+      "feasible": false,
+      "violation_count": 22,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "P007572-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "P002846-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "P002776-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "P007527-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "P002794-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "P002731-2"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "P002751-2"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "P002877-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "P002897-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "P003780-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "P006882-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "P002751-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "P002731-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "P007836-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "B-B01",
+          "trip": "P002841-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "B-B01",
+          "trip": "P002804-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "B-B02",
+          "trip": "P002856-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "B-B02",
+          "trip": "P002826-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "B-B03",
+          "trip": "P002786-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "B-B04",
+          "trip": "P002706-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B01",
+          "trip": "P007746-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B02",
+          "trip": "P007696-1"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 32,
+        "box_count": 80,
+        "multi_stop_trip_count": 5,
+        "makespan_s": 22087.326018819203,
+        "total_energy_kwh": 77.8887733815017,
+        "weighted_delay": 1825819.8864603941,
+        "on_expected_time_count": 52,
+        "on_expected_time_rate": 0.65,
+        "minimum_hard_deadline_slack_s": 18.335195393014146,
+        "minimum_energy_margin_kwh": 0.10547014274446687
+      },
+      "reported_energy_kwh": 77.80620562404232,
+      "reported_makespan_s": 22086.24147479645,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 32,
+          "box_count": 80,
+          "multi_stop_trip_count": 5,
+          "makespan_s": 22086.24147479648,
+          "total_energy_kwh": 77.80620562403959,
+          "weighted_delay": 1825706.532831198,
+          "on_expected_time_count": 52,
+          "on_expected_time_rate": 0.65,
+          "minimum_hard_deadline_slack_s": 18.73116112741991,
+          "minimum_energy_margin_kwh": 0.10879749359298208
+        }
+      },
+      "external_radius_max_duration_difference_s": 1.23463905765675e-10,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 32,
+          "box_count": 80,
+          "multi_stop_trip_count": 5,
+          "makespan_s": 22093.929649130172,
+          "total_energy_kwh": 77.8887733815017,
+          "weighted_delay": 1827102.858164966,
+          "on_expected_time_count": 52,
+          "on_expected_time_rate": 0.65,
+          "minimum_hard_deadline_slack_s": 14.887247820632183,
+          "minimum_energy_margin_kwh": 0.10547014274446687
+        }
+      }
+    },
+    "Q2_anchor_F1_schedule": {
+      "feasible": false,
+      "violation_count": 24,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U01",
+          "trip": "P000203-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U01",
+          "trip": "P000142-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U01",
+          "trip": "P000116-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U02",
+          "trip": "P000241-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U02",
+          "trip": "P000004-2"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U02",
+          "trip": "P000058-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U03",
+          "trip": "P000024-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U04",
+          "trip": "P000112-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U04",
+          "trip": "P001075-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U04",
+          "trip": "P000139-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "P003513-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "P002734-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "P002793-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "P008383-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "P008444-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "P008526-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "A-B01",
+          "trip": "P000117-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "A-B02",
+          "trip": "P001695-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "A-B02",
+          "trip": "P000038-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "A-B05",
+          "trip": "P000060-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "B-B02",
+          "trip": "P002890-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "B-B04",
+          "trip": "P002816-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B02",
+          "trip": "P008447-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B03",
+          "trip": "P008712-1"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 44,
+        "box_count": 80,
+        "multi_stop_trip_count": 9,
+        "makespan_s": 12126.33364640423,
+        "total_energy_kwh": 119.44258726140944,
+        "weighted_delay": 0.0,
+        "on_expected_time_count": 80,
+        "on_expected_time_rate": 1.0,
+        "minimum_hard_deadline_slack_s": 75.89317679788564,
+        "minimum_energy_margin_kwh": 0.019397095627677885
+      },
+      "reported_energy_kwh": 119.31509781657414,
+      "reported_makespan_s": 12125.20984697682,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 44,
+          "box_count": 80,
+          "multi_stop_trip_count": 9,
+          "makespan_s": 12125.209846976768,
+          "total_energy_kwh": 119.31509781657073,
+          "weighted_delay": 0.0,
+          "on_expected_time_count": 80,
+          "on_expected_time_rate": 1.0,
+          "minimum_hard_deadline_slack_s": 76.45507651161643,
+          "minimum_energy_margin_kwh": 0.023236984221382873
+        }
+      },
+      "external_radius_max_duration_difference_s": 1.23463905765675e-10,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 44,
+          "box_count": 80,
+          "multi_stop_trip_count": 9,
+          "makespan_s": 11944.367902099359,
+          "total_energy_kwh": 119.44258726140946,
+          "weighted_delay": 0.0,
+          "on_expected_time_count": 80,
+          "on_expected_time_rate": 1.0,
+          "minimum_hard_deadline_slack_s": 95.23015928199902,
+          "minimum_energy_margin_kwh": 0.019397095627677885
+        }
+      }
+    },
+    "Q2_anchor_N_schedule": {
+      "feasible": false,
+      "violation_count": 21,
+      "violations": [
+        {
+          "type": "resource_overlap",
+          "resource": "U01",
+          "trip": "P000099-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U01",
+          "trip": "P000027-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U02",
+          "trip": "P000128-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "P002898-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "P004078-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U05",
+          "trip": "P002704-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "P002777-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "P002853-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U06",
+          "trip": "P004503-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "P007813-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U07",
+          "trip": "P007781-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "P007706-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "P024774-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "U08",
+          "trip": "P007696-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "A-B01",
+          "trip": "P002438-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "A-B02",
+          "trip": "P000067-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "A-B04",
+          "trip": "P000039-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B01",
+          "trip": "P007757-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B01",
+          "trip": "P007855-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B02",
+          "trip": "P007746-1"
+        },
+        {
+          "type": "resource_overlap",
+          "resource": "C-B02",
+          "trip": "P007831-1"
+        }
+      ],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": false
+      },
+      "metrics": {
+        "trip_count": 29,
+        "box_count": 80,
+        "multi_stop_trip_count": 7,
+        "makespan_s": 12370.883741195285,
+        "total_energy_kwh": 89.48569821547805,
+        "weighted_delay": 791390.9814172869,
+        "on_expected_time_count": 66,
+        "on_expected_time_rate": 0.825,
+        "minimum_hard_deadline_slack_s": 118.87312940235734,
+        "minimum_energy_margin_kwh": 0.13584442671647823
+      },
+      "reported_energy_kwh": 89.3900947227044,
+      "reported_makespan_s": 12370.426177517464,
+      "external_radius_replay": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 29,
+          "box_count": 80,
+          "multi_stop_trip_count": 7,
+          "makespan_s": 12370.426177517442,
+          "total_energy_kwh": 89.39009472270205,
+          "weighted_delay": 791334.3580709281,
+          "on_expected_time_count": 66,
+          "on_expected_time_rate": 0.825,
+          "minimum_hard_deadline_slack_s": 119.10191124127869,
+          "minimum_energy_margin_kwh": 0.13948590939034977
+        }
+      },
+      "external_radius_max_duration_difference_s": 9.890754881780595e-11,
+      "common_radius_asap_repair": {
+        "feasible": true,
+        "violation_count": 0,
+        "violations": [],
+        "checks": {
+          "each_box_exactly_once": true,
+          "hard_deadlines": true,
+          "capacity_and_energy": true,
+          "resource_nonoverlap": true
+        },
+        "metrics": {
+          "trip_count": 29,
+          "box_count": 80,
+          "multi_stop_trip_count": 7,
+          "makespan_s": 12375.015354366758,
+          "total_energy_kwh": 89.48569821547805,
+          "weighted_delay": 791933.980107245,
+          "on_expected_time_count": 66,
+          "on_expected_time_rate": 0.825,
+          "minimum_hard_deadline_slack_s": 118.47540990666448,
+          "minimum_energy_margin_kwh": 0.13584442671647823
+        }
+      }
+    },
+    "local_baseline": {
+      "feasible": true,
+      "violation_count": 0,
+      "violations": [],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": true
+      },
+      "metrics": {
+        "trip_count": 25,
+        "box_count": 80,
+        "multi_stop_trip_count": 14,
+        "makespan_s": 7999.3602268442555,
+        "total_energy_kwh": 87.55055768048484,
+        "weighted_delay": 70443.62115062858,
+        "on_expected_time_count": 73,
+        "on_expected_time_rate": 0.9125,
+        "minimum_hard_deadline_slack_s": 1649.5766595985592,
+        "minimum_energy_margin_kwh": 0.03401380519633079
+      }
+    },
+    "local_improved": {
+      "feasible": true,
+      "violation_count": 0,
+      "violations": [],
+      "checks": {
+        "each_box_exactly_once": true,
+        "hard_deadlines": true,
+        "capacity_and_energy": true,
+        "resource_nonoverlap": true
+      },
+      "metrics": {
+        "trip_count": 25,
+        "box_count": 80,
+        "multi_stop_trip_count": 14,
+        "makespan_s": 7993.355462971289,
+        "total_energy_kwh": 86.34817428329802,
+        "weighted_delay": 31830.130286444655,
+        "on_expected_time_count": 76,
+        "on_expected_time_rate": 0.95,
+        "minimum_hard_deadline_slack_s": 968.4276071234772,
+        "minimum_energy_margin_kwh": 0.12927103176289112
+      }
+    }
+  }
+}

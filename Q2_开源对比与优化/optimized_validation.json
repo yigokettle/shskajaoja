@@ -1,0 +1,54 @@
+{
+  "method": "combined observed batches + all feasible model/order variants; 1-second conservative CP-SAT intervals",
+  "seed": 2026,
+  "candidate_count": 572,
+  "primary_objective": "weighted lateness = 0",
+  "restrictions": "<=25 sorties, <=86.348 kWh, Cmax <=7993 seconds; candidate pool is restricted",
+  "stages": [
+    {
+      "stage": "Cmax",
+      "status": "FEASIBLE",
+      "bound": 5855.0,
+      "wall_s": 60.0863371,
+      "value": 6570
+    },
+    {
+      "stage": "energy",
+      "status": "FEASIBLE",
+      "bound": 67856125.0,
+      "wall_s": 60.144502100000004,
+      "value": 71372134
+    },
+    {
+      "stage": "sorties",
+      "status": "OPTIMAL",
+      "bound": 25.0,
+      "wall_s": 17.7832218,
+      "value": 25
+    }
+  ],
+  "validation": {
+    "feasible": true,
+    "violation_count": 0,
+    "violations": [],
+    "checks": {
+      "each_box_exactly_once": true,
+      "hard_deadlines": true,
+      "capacity_and_energy": true,
+      "resource_nonoverlap": true
+    },
+    "metrics": {
+      "trip_count": 25,
+      "box_count": 80,
+      "multi_stop_trip_count": 6,
+      "makespan_s": 6569.099882661642,
+      "total_energy_kwh": 71.37213553613768,
+      "weighted_delay": 0.0,
+      "on_expected_time_count": 80,
+      "on_expected_time_rate": 1.0,
+      "minimum_hard_deadline_slack_s": 548.5313395327034,
+      "minimum_energy_margin_kwh": 0.1895493558598309
+    }
+  },
+  "global_optimality": "Only zero lateness has a global lower-bound certificate; remaining objectives are restricted-pool results."
+}
