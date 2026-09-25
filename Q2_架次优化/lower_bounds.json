@@ -1,0 +1,15 @@
+{
+  "N_lb": 10,
+  "N_lb_weight": 10,
+  "N_lb_volume": 9,
+  "N_lb_binpack": 10,
+  "Cmax_lb": 5942,
+  "E_lb_free": 59.714524,
+  "E_lb_fixedN": 60.441452,
+  "n": 23,
+  "cur": {
+    "n": 23,
+    "cmax_s": 6569,
+    "energy_kwh": 71.38850385696064
+  }
+}
